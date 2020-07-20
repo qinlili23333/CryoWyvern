@@ -1,0 +1,6 @@
+{
+    "name": "Super Hexagon",
+    "extraCommand": "",
+    "minCWver": "1",
+    "optiLibs": [{"name":"freeglut"},{"name":"FreeImage"},{"name":"zlib"}]
+}

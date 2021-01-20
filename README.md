@@ -1,2 +1,6 @@
-# CryoWyvern
-Game Optimize Toolsets TESTED BY QINLILI
+# CryoWyvern  
+## 一个由琴梨梨创建的游戏优化工具,名字的意思是冰龙  
+### 本工具仍处于开发阶段,不建议在正式发布前试用  
+### 待正式发布后将提供文档以供协助开发  
+
+## 这个项目随时可能弃坑,请不要依赖本项目  

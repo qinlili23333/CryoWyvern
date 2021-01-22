@@ -1,0 +1,28 @@
+@echo off
+color f0
+title 请稍等
+echo 安装器版本1.0.0.000
+echo %time%正在检查安装目录
+set Framework=%appdata%\Qinlili\CryoWyvern
+if exist %Framework% rd /S /Q %Framework% & echo %time%正在删除旧版本
+mkdir %Framework%
+cd /d %Framework%
+echo %time%正在设置日志目录
+if not exist %Framework%\Logs mkdir %Framework%\Logs
+if not exist %Framework%\Logs\Installer.log echo CryoWyvern框架安装器日志>%Framework%\Logs\Installer.log
+echo %time%正在准备
+ping cdn.jsdelivr.net >nul
+title 正在下载安装文件
+echo 正在下载7za[1/5]
+curl https://cdn.jsdelivr.net/gh/qinlili23333/CryoWyvern@master/Framework/InstallerFiles/7za.olbin -o 7za.exe
+echo 正在下载程序包[2/5]
+curl https://cdn.jsdelivr.net/gh/qinlili23333/CryoWyvern@master/Framework/InstallerFiles/Install.cbin -o Install.7z
+echo 正在解压程序包[3/5]
+7za x Install.7z
+echo 删除临时文件[4/5]
+del /F /Q Install.7z
+echo 创建快捷方式[5/5]
+del /F /S /Q "C:\Users\%username%\Desktop\CryoWyvern"
+mklink "C:\Users\%username%\Desktop\CryoWyvern" %Framework%\CryoWyvern.exe 
+echo 安装完成!
+pause >nul

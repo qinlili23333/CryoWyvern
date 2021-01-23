@@ -1,0 +1,37 @@
+@echo off
+color f0
+title 准备中...
+echo %time%检查环境
+set Framework=%appdata%\Qinlili\CryoWyvern
+if not exist %Framework%\Temp mkdir %Framework%\Temp
+title [CryoWyvern]Castle
+:choosepath
+set /p GamePath=请把游戏目录拖进来
+if not exist %GamePath%\Castle.exe goto chooseagain
+echo %time%你选择的游戏目录是%GamePath%
+cd /d %GamePath%
+:chooseapply
+echo 请确保游戏已经彻底关闭
+echo 请选择你要应用的修改：
+echo [0]替换64位程序[琴梨梨]
+set /p apply=
+if %apply%==0 goto apply0
+goto chooseapply
+:apply0
+echo %time%正在下载修补块文件
+curl https://cdn.jsdelivr.net/gh/qinlili23333/CryoWyvernStorage0@main/PatchBlock/Steam/S339290/Castle64.block -o %Framework%\Temp\Castle64.block
+echo %time%正在应用修改
+%Framework%/hpatchz.exe -f %GamePath% %Framework%\Temp\Castle64.block %GamePath%
+echo %time%修改已应用,下次启动游戏生效
+echo 请关闭本窗口或按任意键退出
+pause >nul
+exit
+
+:chooseagain
+echo %time%未在%GamePath%下检测到游戏文件"Castle.exe"
+echo %time%你选择的目录不是游戏目录！
+goto choosepath
+
+
+
+

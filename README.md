@@ -4,7 +4,10 @@
 [点击这里][]([局域网用户点击这里][])下载框架安装器  
 ### 本工具仍处于开发阶段,虽然已经可用,但bug极多  
 ### 待正式发布后将提供文档以供协助开发  
-[![](https://data.jsdelivr.com/v1/package/gh/qinlili23333/CryoWyvern/badge)](https://www.jsdelivr.com/package/gh/qinlili23333/CryoWyvern)
+  
+  
+### 月度使用统计  
+主仓库[![](https://data.jsdelivr.com/v1/package/gh/qinlili23333/CryoWyvern/badge)](https://www.jsdelivr.com/package/gh/qinlili23333/CryoWyvern) 1号附加仓库[![](https://data.jsdelivr.com/v1/package/gh/qinlili23333/CryoWyvernStorage0/badge)](https://www.jsdelivr.com/package/gh/qinlili23333/CryoWyvernStorage0)  
 ## 这个项目随时可能弃坑,请不要依赖本项目  
 
 

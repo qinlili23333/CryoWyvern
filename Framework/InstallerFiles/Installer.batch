@@ -1,27 +1,27 @@
 @echo off
 color f0
-echo å®‰è£…å™¨ç‰ˆæœ¬1.0.1.000
-title æ­£åœ¨å‡†å¤‡å®‰è£…
-echo %time%æ­£åœ¨æ£€æŸ¥å®‰è£…ç›®å½•
+echo °²×°Æ÷°æ±¾1.0.1.000
+title ÕýÔÚ×¼±¸°²×°
+echo %time%ÕýÔÚ¼ì²é°²×°Ä¿Â¼
 set Framework=%appdata%\Qinlili\CryoWyvern
-if exist %Framework% rd /S /Q %Framework% & echo %time%æ­£åœ¨åˆ é™¤æ—§ç‰ˆæœ¬
+if exist %Framework% rd /S /Q %Framework% & echo %time%ÕýÔÚÉ¾³ý¾É°æ±¾
 mkdir %Framework%
 cd /d %Framework%
-echo %time%æ­£åœ¨è®¾ç½®æ—¥å¿—ç›®å½•
+echo %time%ÕýÔÚÉèÖÃÈÕÖ¾Ä¿Â¼
 if not exist %Framework%\Logs mkdir %Framework%\Logs
-if not exist %Framework%\Logs\Installer.log echo CryoWyvernæ¡†æž¶å®‰è£…å™¨æ—¥å¿—>%Framework%\Logs\Installer.log
-title æ­£åœ¨å®‰è£…
-echo æ­£åœ¨ä¸‹è½½7za[1/5]
+if not exist %Framework%\Logs\Installer.log echo CryoWyvern¿ò¼Ü°²×°Æ÷ÈÕÖ¾>%Framework%\Logs\Installer.log
+title ÕýÔÚ°²×°
+echo ÕýÔÚÏÂÔØ7za[1/5]
 curl https://cdn.jsdelivr.net/gh/qinlili23333/CryoWyvern@master/Framework/InstallerFiles/7za.olbin -o 7za.exe
-echo æ­£åœ¨ä¸‹è½½ç¨‹åºåŒ…[2/5]
+echo ÕýÔÚÏÂÔØ³ÌÐò°ü[2/5]
 curl https://cdn.jsdelivr.net/gh/qinlili23333/CryoWyvern@master/Framework/InstallerFiles/Install.cbin -o Install.7z
-echo æ­£åœ¨è§£åŽ‹ç¨‹åºåŒ…[3/5]
+echo ÕýÔÚ½âÑ¹³ÌÐò°ü[3/5]
 7za x Install.7z
-echo åˆ é™¤ä¸´æ—¶æ–‡ä»¶[4/5]
+echo É¾³ýÁÙÊ±ÎÄ¼þ[4/5]
 del /F /Q Install.7z
-echo åˆ›å»ºå¿«æ·æ–¹å¼[5/5]
+echo ´´½¨¿ì½Ý·½Ê½[5/5]
 del /F /S /Q "C:\Users\%username%\Desktop\CryoWyvern"
 mklink "C:\Users\%username%\Desktop\CryoWyvern" %Framework%\CryoWyvern.exe
-title å®‰è£…å®Œæˆ
-echo å®‰è£…å®Œæˆ!
+title °²×°Íê³É
+echo °²×°Íê³É!
 pause >nul

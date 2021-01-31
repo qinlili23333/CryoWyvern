@@ -1,10 +1,10 @@
 @echo off
 color f0
-echo 安装器版本1.0.1.000
+echo 安装器版本1.0.2.000
 title 正在准备安装
 echo %time%正在检查安装目录
 set Framework=%appdata%\Qinlili\CryoWyvern
-if exist %Framework% rd /S /Q %Framework% & echo %time%正在删除旧版本
+if exist %Framework% echo %time%已经找到旧版本,将覆盖安装,插件和数据将保留
 mkdir %Framework%
 cd /d %Framework%
 echo %time%正在设置日志目录
@@ -16,7 +16,7 @@ curl https://cdn.jsdelivr.net/gh/qinlili23333/CryoWyvern@master/Framework/Instal
 echo 正在下载程序包[2/5]
 curl https://cdn.jsdelivr.net/gh/qinlili23333/CryoWyvern@master/Framework/InstallerFiles/Install.cbin -o Install.7z
 echo 正在解压程序包[3/5]
-7za x Install.7z
+7za x Install.7z -y
 echo 删除临时文件[4/5]
 del /F /Q Install.7z
 echo 创建快捷方式[5/5]
